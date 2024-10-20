@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:movies_app/features/download/presentation/view/download_view.dart';
 import 'package:movies_app/features/home/presentation/views/widgets/home_view_widgets/home_view_body.dart';
+import 'package:movies_app/features/me/presentation/view/me_view.dart';
 import 'package:movies_app/features/saved/presentation/views/saved_view.dart';
 import 'package:movies_app/features/search/presentation/views/search_view.dart';
 
@@ -15,6 +17,8 @@ List<Widget> screens = [
   const HomeViewBody(),
   SearchView(),
   const SavedView(),
+  const DownloadView(),
+  const MeView(),
 ];
 
 class _HomeViewState extends State<HomeView> {
@@ -44,6 +48,14 @@ class _HomeViewState extends State<HomeView> {
             BottomNavigationBarItem(
               icon: Icon(Icons.bookmark),
               label: 'Saved',
+            ),
+            BottomNavigationBarItem(
+              icon: Icon(Icons.download),
+              label: 'Downloads',
+            ),
+            BottomNavigationBarItem(
+              icon: Icon(Icons.person_outline),
+              label: 'Me',
             ),
           ],
         ),
